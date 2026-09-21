@@ -1,0 +1,15 @@
+{
+  "name": "英単語帳 中学・高校",
+  "short_name": "英単語帳",
+  "description": "中学・高校の英単語1200語＋熟語。読み方・発音・自動再生・4択/スペル問題・AI苦手分析。",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f7fb",
+  "theme_color": "#3b82f6",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
