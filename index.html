@@ -19,13 +19,15 @@
     --warn:#f59e0b; --bad:#ef4444; --line:#e5ecf5; --chip:#eef4ff;
     --shadow:0 8px 24px rgba(31,42,68,.08);
   }
-  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
   html,body{margin:0;padding:0}
   body{
     font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
     background:var(--bg); color:var(--ink);
     min-height:100vh; -webkit-text-size-adjust:100%;
+    -webkit-user-select:none; user-select:none;      /* 長押し選択メニューを抑制（アプリ風） */
   }
+  input,textarea{-webkit-user-select:text; user-select:text}  /* 入力欄だけ選択可 */
   .wrap{max-width:720px;margin:0 auto;padding:0 16px 96px}
   header.app{
     position:sticky; top:0; z-index:20; background:rgba(244,247,251,.9);
