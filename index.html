@@ -487,6 +487,7 @@ const RANGES=[
   {v:'中3',  label:'中3'},
   {v:'JHS', label:'中学全て'},
   {v:'高校', label:'高校'},
+  {v:'大学', label:'大学受験'},
 ];
 function rangeLabel(v){ const r=RANGES.find(x=>x.v===v); return r?r.label:v; }
 function inRange(w,v){
@@ -897,7 +898,7 @@ function renderAnalysis(){
   // 範囲別の苦手率
   const byLv={};
   learned.forEach(w=>{ const st=stats[keyOf(w)],lv=w.level||'その他'; (byLv[lv]=byLv[lv]||{w:0,n:0}); byLv[lv].w+=st.w; byLv[lv].n+=st.s; });
-  const lvOrder=['中1','中2','中3','高校'];
+  const lvOrder=['中1','中2','中3','高校','大学'];
   const bars=Object.keys(byLv).sort((a,b)=>(lvOrder.indexOf(a)+99)%100-(lvOrder.indexOf(b)+99)%100)
     .map(lv=>{ const r=byLv[lv]; const p=r.n?Math.round(r.w/r.n*100):0; return '<span>'+esc(lv)+'：まちがい率'+p+'%</span>'; }).join('');
   // 品詞別
